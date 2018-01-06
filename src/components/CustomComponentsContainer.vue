@@ -1,7 +1,11 @@
 <template>
   <div class="custom-components-container">
     <h3>{{msg}}</h3>
-    <custom-input v-model="value"></custom-input>
+    <custom-input 
+      v-model="value" 
+      :label="label" 
+      :hint="hint"
+      :placeholder="placeholder"></custom-input>
     <br>
     {{value}}
   </div>
@@ -13,7 +17,10 @@ export default {
   data() {
     return {
       msg: 'Custom Components Container',
-      value: 'this is username',
+      value: '',
+      label: 'Enter your email',
+      hint: 'email id',
+      placeholder: 'Enter your email id',
     };
   },
   components: {
