@@ -5,7 +5,8 @@
       v-model="value" 
       :label="label" 
       :hint="hint"
-      :placeholder="placeholder"></custom-input>
+      :placeholder="placeholder"
+      pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"></custom-input>
     <br>
     {{value}}
   </div>

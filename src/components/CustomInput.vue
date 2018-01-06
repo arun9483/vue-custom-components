@@ -6,10 +6,10 @@
     <div class="text-field">
       <input 
         type="text"
-        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
         id="cinput"
         :placeholder="placeholder" 
-        :value="rawValue" 
+        :value="rawValue"
+        :pattern="pattern" 
         @input="inputHandler($event)" 
         @focus="focusHandler($event)"
         @blur="blurHandler($event)"/>
@@ -26,7 +26,7 @@
 <script>
 export default {
   name: 'CustomInput',
-  props: ['value', 'label', 'hint', 'placeholder'],
+  props: ['value', 'label', 'hint', 'placeholder', 'pattern'],
   data() {
     return {
       rawValue: this.value,
